@@ -43,9 +43,10 @@ function subirImagen(){
 function ayudaParaArchivo(cargando){
     if (cargando) {
         btnSubir.disabled = true;
+        mensaje.innerText = "Subiendo...";
         mensaje.style.display = 'block';
     } else {
         btnSubir.disabled = false;
-        mensaje.style.display = 'none';
+        mensaje.innerText = "Subida Exitosa";
     }
 }
