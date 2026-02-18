@@ -1,29 +1,84 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #2e2e2e;
     margin: 0;
-    padding: 20px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
+
 .container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
-.Subida {
-    display: block;
-    margin-bottom: 10px;
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
 }
-.cajaArchivo {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+
 .espacioDeSubida {
+    border: 2px dashed #cbd5e0;
+    padding: 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.espacioDeSubida:hover {
+    border-color: #4a90e2;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+#btnSubir {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#btnSubir:hover:not(:disabled) {
+    background-color: #357abd;
+}
+
+#btnSubir:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.Mensaje {
+    margin-top: 15px;
+    color: #4a90e2;
+    font-weight: 500;
+    font-style: italic;
+}
+
+#preview-container {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#preview-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-in;
 }
